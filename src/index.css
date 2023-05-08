@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.top-bar, .footer-bar{
+  background-image: url('./assets/images/more/top-bar.jpg');
+}
+
+.footer-section{
+  background-image: url('./assets/images/more/footer-banner.jpg');
+}
+.form-container{
+  background: #F4F3F0;
+border-radius: 5px;
+}
+.add-btn{
+  background-color: #D2B48C;
+}
+
+.header-images{
+  background-image:
+  linear-gradient(to bottom, rgba(14, 14, 16, 0.52), rgba(8, 7, 8, 0.73)),
+  url('./assets/images/more/header-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-position: left center;
+  height: 800px;
+  
+  color: white;
+  padding: 20px;
+}
