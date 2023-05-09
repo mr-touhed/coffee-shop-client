@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Forms from "../../components/Forms";
 import Swal from 'sweetalert2'
 
@@ -38,8 +39,8 @@ const AddCoffee = () => {
        })
     }
     return (
-        <div>
-            <button>Back to Home</button>
+        <div className="mt-6">
+            <Link to="/" className="text-lg font-semibold border p-1 ml-8 rounded-lg text-slate-500">Back to Home</Link>
             <div className="form-container md:w-1/2 mx-auto">
                    <Forms onSubmit={addCoffie} />
             </div>

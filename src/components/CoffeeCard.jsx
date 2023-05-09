@@ -1,4 +1,5 @@
 import { EyeIcon, PencilSquareIcon, TrashIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 const CoffeeCard = ({coffee,removeOne}) => {
     const {name,Chef,Supplier,Taste,Details,Photo,_id} = coffee;
@@ -63,9 +64,11 @@ const CoffeeCard = ({coffee,removeOne}) => {
             <div className='w-8 h-8 bg-[#D2B48C] flex justify-center items-center rounded-md'>
             <EyeIcon className="h-6 w-6 text-white" />
             </div>
-        <div className='w-8 h-8 bg-green-600 flex justify-center items-center rounded-md'>
+        <Link to={`/updateCoffee/${_id}`}
+        
+         className='w-8 h-8 bg-green-600 flex justify-center items-center rounded-md'>
         <PencilSquareIcon className="h-6 w-6 text-white" />
-        </div>
+        </Link>
         <div
         onClick={() =>removeItem(_id)}
         className='w-8 h-8 bg-red-500 flex justify-center items-center rounded-md'>
