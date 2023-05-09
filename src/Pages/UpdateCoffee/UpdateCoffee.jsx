@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Forms from "../../components/Forms";
+import Swal from "sweetalert2";
 
 const UpdateCoffee = () => {
     const coffee = useLoaderData()
@@ -30,6 +31,15 @@ console.log(coffee);
        .then(res => res.json())
        .then(result => {
         console.log(result);
+        if(result.modifiedCount > 0){
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Update SuccessFully',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        }
        })
     }
     return (

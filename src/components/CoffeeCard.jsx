@@ -61,9 +61,9 @@ const CoffeeCard = ({coffee,removeOne}) => {
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{Details}</p>
         </div>
         <div className='space-y-8 ml-6'>
-            <div className='w-8 h-8 bg-[#D2B48C] flex justify-center items-center rounded-md'>
+            <Link to={`/details/${_id}`} className='w-8 h-8 bg-[#D2B48C] flex justify-center items-center rounded-md'>
             <EyeIcon className="h-6 w-6 text-white" />
-            </div>
+            </Link>
         <Link to={`/updateCoffee/${_id}`}
         
          className='w-8 h-8 bg-green-600 flex justify-center items-center rounded-md'>
